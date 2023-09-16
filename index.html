@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="java code/task 1 code.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,39 @@
 </head>
 <body>
     <h1 id="h1t1">Hello world</h1>
-    <button id="my-button" onclick="button_func()">my-button</button>
-    <script>
-        function button_func() {
-            console.log('hello world');
-            document.getElementById('h1t1').textContent = 'Moi maailma';
-        }
-    </script>
+    <button id="my-button">my-button</button>
 
     <textarea id="text-input" placeholder="Enter text"></textarea>
 
     <button id="add-data">Add data to the list</button>
     <ul id="my-list">
     </ul>
-
-    <script>
-        document.getElementById('add-data').addEventListener('click', function () {
-            const my_list = document.getElementById('my-list');
-            const text_in = document.getElementById('text-input').value;
-            const list_text = document.createElement('li');
-            list_text.textContent = text_in;
-            my_list.appendChild(list_text);
-        });
-    </script>
+    <table id = 'user-table'>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Admin</th>
+            <th>Image</th>
+        </tr>
+        <tr>
+            <td>Webmaster</td>
+            <td>example@email.com</td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>User123</td>
+            <td>example@email.com</td>
+            <td>-</td>
+        </tr>
+        
+    </table>
+    <textarea id="input-username" placeholder="Enter username"></textarea>
+    <textarea id="input-email" placeholder="Enter email"></textarea>
+    <input type="checkbox", id="input-admin", value = "-">
+    <label for="checkbox">Are you admin?</label>
+    <button id="submit-data">Submit entered data</button>
+    <button id = "empty-table">Empty table</button>
+    <input type="file" id="input-image">
+    <button id = 'upload'>Upload</button>
 </body>
 </html>
