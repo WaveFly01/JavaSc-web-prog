@@ -8,10 +8,9 @@ if(document.readyState !== "loading") {
     })
 }
 function initializeCode() {
-    TableButton = document.getElementById("button")
     UserTable = document.getElementById("user-table")
 
-    TableButton.addEventListener('click', getDataset)
+    getDataset();
 
     async function getDataset() {
         const url1 = 'https://statfin.stat.fi/PxWeb/sq/4e244893-7761-4c4f-8e55-7a8d41d86eff';
