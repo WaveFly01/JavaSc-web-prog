@@ -2,7 +2,7 @@
     box-sizing: border-box
 }
 html {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     font-size: 16px
 }
 
@@ -14,12 +14,12 @@ body {
     padding: 60px;
     width: 60%;
 }
-.center h1{
+h1{
     font-size: 28px ;
     background-color:  fuchsia;
     text-align: center;
 }
-.center table{
+table{
     border-collapse: collapse;
     font-size: 16px;
     width: 100%;
@@ -27,20 +27,20 @@ body {
     table-layout: fixed;
 }
 
-.center th{
+th{
     background-color: #b7d0ff;
     font-weight: bold;
     padding: 12px 0px 12px 6px;
     border-bottom: 2px solid gray;
 }
 
-.center td{
+td{
     padding: 6px;
     border-bottom: 1px solid gray;
 }
-.center table tr:nth-child(even) {
+table tr:nth-child(even) {
     background-color: #f2f2f2
 }
-.center table tr:not(:first-child):not(:nth-child(even)) {
+table tr:not(:first-child):not(:nth-child(even)) {
     background-color: #ffffff;
 }
