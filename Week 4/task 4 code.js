@@ -11,18 +11,21 @@ function initializeCode() {
     InputShow = document.getElementById("input-show")
     SubmitButton = document.getElementById("submit-data")
     body = document.getElementById("body")
-    divcont = document.getElementById("div")
+    divcont = document.getElementById("div0")
 
     SubmitButton.addEventListener("click", async function () {
+        
         const q = InputShow.value
         const url =  "https://api.tvmaze.com/search/shows?q="+q
         const dataPromise = await fetch(url);
         const data = await dataPromise.json();
+        divcont.innerHTML = ''
 
         data.forEach(element => {
-           let div1 = document.createElement("div")
-           div1.setAttribute("class", "show-id")
            try {
+            let div1 = document.createElement("div")
+            div1.setAttribute("class", "show-data")
+
             let img1 = document.createElement("img")
             img1.setAttribute("src", element["show"]["image"]["medium"])
 
@@ -39,12 +42,13 @@ function initializeCode() {
             div1.appendChild(img1)
             div1.appendChild(div2)
 
+            divcont.appendChild(div1)
+
 
            } catch (error) {
                 console.log("There is no info for that show");
            }
            
-           divcont.appendChild(div1)
             
             
         });
